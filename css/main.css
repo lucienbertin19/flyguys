@@ -176,6 +176,60 @@ body {
     text-align: center;
 }
 
+.modal{
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(0,0,0,0.3);
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    display:none;
+    
+}
+
+.modal_close{
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    background-color:red;
+    border: 2px solid red;
+    font-size: 24px;
+}
+
+.modal_close:hover{
+    cursor: pointer;
+    color: white;
+}
+.modal_content{
+    background-color:rgba(20, 19, 19, 0.5);
+    margin:auto;
+    height:75vh;
+    width:50vw;
+    margin-top:12.5vh;
+    overflow: auto;
+    border:1px solid #ccc;
+    
+}
+
+#registration_form{
+    padding:20px;
+    display:flex;
+    flex-direction: column;
+    color:white;
+}
+#registration_form > input, #registration_form > select{
+    margin-top:5px;
+    padding:8px;
+    background-color:dodgerblue;
+    color:white;
+    border:none;
+}
+
+#registration_form > input::placeholder, #registration_form > select::placeholder{
+    color:white;
+}
+
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .image_column {
