@@ -1,0 +1,223 @@
+:root{
+            
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin:0;
+    font-family:Arial;
+    background-image:url('../img/bg-image.jpg');
+    }
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#booking_form{
+    margin-top:100px;
+    margin-bottom: 100px; 
+    display: flex;
+    justify-content: center;
+}
+
+#booking_form>input {
+    padding:10px 7px;
+    background-color: darkgoldenrod;
+    color:rgb(46, 5, 5);
+    border: 4px solid white;
+    font-size: 20px;
+}
+#booking_form>input:first-child{
+    flex:25%;
+}
+#booking_form>input:nth-child(2){
+    flex:40%;
+}
+#booking_form>input:nth-child(3){
+    flex:20%;
+}
+#booking_form>input:last-child{
+    flex:10%;
+}
+
+#booking_form>input[name="search"]{
+    background-color: steelblue;
+}
+
+#booking_form>input[name="search"]:hover{
+    background-color: rgba(70,130,180,0.1);
+}
+
+#booking_form>input:not(:last-child) {
+    border-right:none; 
+}
+.image_row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.image_column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    margin-top: 8px;
+}
+.image_column img {
+    vertical-align: middle;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .image_column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+    #booking_form{
+        flex-direction: column;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */ 
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+     }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    .image_column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
