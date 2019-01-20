@@ -5,7 +5,8 @@
 <?php include 'layouts/nav.php';?>
 <?php include 'layouts/booking_form.php';?>
 <?php include 'layouts/locations.php';?>
-<?php include 'layouts/registration.php';?>
+<?php include 'layouts/registration_form.php';?>
+<?php include 'layouts/login_form.php';?>
     <script>
         function myFunction() {
         var x = document.getElementById("myTopnav");
@@ -19,6 +20,10 @@
         switch(x){
           case 'registration':
           var element = document.getElementById('modal_registration');
+          element.style.display = 'block';
+          break;
+          case 'login':
+          var element = document.getElementById('modal_login');
           element.style.display = 'block';
           break;
         }

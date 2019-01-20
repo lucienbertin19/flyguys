@@ -208,16 +208,19 @@ body {
     margin-top:12.5vh;
     overflow: auto;
     border:1px solid #ccc;
-    
+
 }
 
-#registration_form{
+#registration_form, #login_form{
     padding:20px;
     display:flex;
     flex-direction: column;
     color:white;
 }
-#registration_form > input, #registration_form > select{
+#registration_form > input,
+#registration_form > select, 
+#login_form > input, 
+#login_form > select{
     margin-top:5px;
     padding:8px;
     background-color:dodgerblue;
@@ -225,10 +228,18 @@ body {
     border:none;
 }
 
-#registration_form > input::placeholder, #registration_form > select::placeholder{
+#registration_form > input::placeholder,
+#registration_form > select::placeholder,
+#login_form > input::placeholder,
+#login_form > select::placeholder{
     color:white;
 }
 
+#news{
+    width: 100vw;
+    height: 100vh;
+    
+}
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
