@@ -273,6 +273,7 @@ body {
     border: none;
 }
 
+
 .paybtn{
     background-color: #4CAF50;
     color: white;
@@ -294,6 +295,45 @@ body {
 
 }
 
+#admin{
+    background-color: rgba(27, 29, 27, 0.603); 
+    font-size: 20px;
+    color: white;
+    padding:30px; 
+}
+
+#admin input[type=email] , [type=password]{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+}
+
+
+
+#admin{
+    display:block;
+    margin:130px auto;
+    width:60%;
+    
+}
+
+.adminbtn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    display:block;
+    margin: 10px auto;
+    border: none;
+    width: 80%;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.adminbtn:hover{
+    filter: grayscale(100%); 
+}
+
 #basket{
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
@@ -301,6 +341,17 @@ body {
     margin:auto;
     margin-top: 40px;
 }
+#search_flight{
+    width:100%;
+}
+#search_flight table {
+    margin:auto;
+    width:80%;
+}
+#search_flight table col {
+    width:25%
+}
+
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
@@ -311,6 +362,10 @@ body {
     }
     #booking_form{
         flex-direction: column;
+    }
+    #search_flight table {
+        margin:auto;
+        width:100%;
     }
 }
 
@@ -345,5 +400,10 @@ body {
         -ms-flex: 100%;
         flex: 100%;
         max-width: 100%;
+    }
+
+    #search_flight table {
+        margin:auto;
+        width:100%;
     }
 }

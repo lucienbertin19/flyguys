@@ -26,6 +26,12 @@ function myFunction() {
       break;
     }
   }
+
+  function getFlightDays(day){
+    
+
+  }
+
   function closeModal(){
     Array.from(document.getElementsByClassName("modal")).forEach(
         function(element, index, array) {

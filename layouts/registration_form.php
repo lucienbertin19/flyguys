@@ -12,7 +12,7 @@
         <input type="text" placeholder="Second line of address" name="address2" required>
         <input type="text" placeholder="Enter postcode" name="postcode" pattern="[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}"required>
         <input type="text" placeholder="County" name="town" required>
-        <select id="country" name="country">
+        <select id="state" name="country">
             <option value="unitedkingdom">united kingdom</option>
             <option value="usa">USA</option>
             <option value="paris">Paris</option>
