@@ -353,22 +353,6 @@ body {
 }
 
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-    .image_column {
-        -ms-flex: 50%;
-        flex: 50%;
-        max-width: 50%;
-    }
-    #booking_form{
-        flex-direction: column;
-    }
-    #search_flight table {
-        margin:auto;
-        width:100%;
-    }
-}
-
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */ 
 @media screen and (max-width: 600px) {
     .topnav a:not(:first-child), .dropdown .dropbtn {
