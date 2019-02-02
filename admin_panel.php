@@ -11,8 +11,8 @@
 
 
 <div id="header">
-<center><img src=".png">
-<h3> Welcome to Admin Panel </h3></center>
+<center><img src="img/ad.png">
+<h3> Welcome to the admin panel </h3></center>
 </div>
 
 <div id="sidemenu">

@@ -3,9 +3,12 @@ body{
 	margin: 0px;
 	border: 0px;
 }
+
+
+
 #header{
 	width: auto;
-	height: 110px;
+	height: 170px;
 	background: #34495e;
 	color: white;
 }
