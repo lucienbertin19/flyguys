@@ -1,12 +1,5 @@
 <?php
-    include 'config/database.php';
-    //create an instance of database
-    $db_object = new DBController();
-    //fetch all destination names
-    $result = $db_object->runQuery('SELECT DISTINCT destination_name FROM destination');
-    $search_flight = $db_object->runQuery('SELECT flight_type.type, "Stanstead" as "name", destination.destination_name as "destination_name", departure.departure_day as "departure_day", destination.duration FROM departure 
-    JOIN flight_type ON flight_type.id=departure.id JOIN destination on destination.flight_type_id = flight_type.id');
-
+    include './handlers/booking_handler.php';
 ?>
 <!DOCTYPE html>
 <html>

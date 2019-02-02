@@ -11,6 +11,7 @@ body{
 	height: 170px;
 	background: #34495e;
 	color: white;
+	text-align: center;
 }
 #sidemenu{
 	float: left;
@@ -24,6 +25,7 @@ body{
 	background:#2c3e50;
 	color: white;
 	padding-left:330px;
+	text-align: 
 }
 #head_img{
 	background:white;

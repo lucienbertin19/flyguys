@@ -11,8 +11,8 @@
 
 
 <div id="header">
-<center><img src="img/ad.png">
-<h3> Welcome to the admin panel </h3></center>
+<img src="img/ad.png">
+<h3> Welcome to the admin panel </h3>
 </div>
 
 <div id="sidemenu">
@@ -27,7 +27,7 @@
 <div id="data">
 <br><br>
 
-<center><h1>Data available</h1></center>
+<h1>Data available</h1>
 <?php
     
 ?>
