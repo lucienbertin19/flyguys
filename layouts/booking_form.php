@@ -40,9 +40,16 @@ $(document).ready(function () {
             display.map(function(currentValue, index, array){
                 $converted_string = currentValue.departure_day;
                     console.log(currentValue);
-                    $('#search_flight>table>').empty()
+                    $('#search_flight>table>tbody').empty()
                     .append("<tr><td>"+currentValue.type+"</td><td>"+currentValue.name+"</td><td>"+currentValue.destination_name+"</td><td>"
-                    +currentValue.departure_day +"</td><td>"+currentValue.duration+"</td></tr>");
+                    +currentValue.departure_day +"</td><td>"+currentValue.duration+"</td><td><button>Book</button></td></tr>");
+
+                    $('#search_flight button').click(function(event){
+                        event.stopPropagation();
+                        event.stopImmediatePropagation();
+                        localStorage.setItem("booking", "{"+currentValue.destination_name+","+currentValue.departure_day+"}"); 
+                        alert('booking has been made');
+                    });
             });
         });
         event.preventDefault(); 

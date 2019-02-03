@@ -6,7 +6,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     margin:0;
     font-family:Arial;
@@ -359,9 +358,43 @@ body {
 #search_flight table {
     margin:auto;
     width:80%;
+    font-family: 'Times New Roman', Times, serif
 }
-#search_flight table col {
-    width:25%
+#search_flight table td, #search_flight table th{
+    text-align: left;
+    padding:5px;
+}
+#search_flight table th{
+    background-color: #008CBA;
+}
+#search_flight table tr:nth-child(even){
+    background-color: #333;
+    color: white;
+}
+#search_flight table tr:nth-child(odd){
+    background-color: white;
+    color: black;
+}
+#search_flight table button{
+    background-color: #4CAF50;
+    color:white;
+    font-weight: 700;
+    border:none;
+    padding:3px;
+    width:80%;
+    display:block;
+    margin:auto;
+}
+#search_flight table button:hover{
+    background-color: #008CBA;
+    color:black;
+}
+#search_flight table button:active{
+    background-color: black;
+    color:white;
+}
+button:hover, [type='submit']{
+    cursor: pointer;
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */ 

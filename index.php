@@ -9,14 +9,19 @@
         <?php include 'layouts/booking_form.php';?>
         <div id='search_flight'>
             <table>
-                <col>
-                <tr>
-                    <th>Flight type</th>
-                    <th>Departure</th>
-                    <th>Destination</th>
-                    <th>Date</th>
-                    <th>Duration</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Flight type</th>
+                        <th>Departure</th>
+                        <th>Destination</th>
+                        <th>Date</th>
+                        <th>Duration</th>
+                        <th>Booking</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
             </table>
         </div>
         <?php include 'layouts/locations.php';?>
@@ -31,10 +36,17 @@
             var flight_result = <?php echo($search_flight);?>;
                 var result = flight_result.map(function (currentValue, index, array){
                     $converted_string = currentValue.departure_day;
-                    console.log(currentValue);
-                    $('#search_flight>table')
+                    console.log($converted_string);
+                    $('#search_flight>table>tbody')
                     .append("<tr><td>"+currentValue.type+"</td><td>"+currentValue.name+"</td><td>"+currentValue.destination_name+"</td><td>"
-                    +currentValue.departure_day +"</td><td>"+currentValue.duration+"</td></tr>");
+                    +currentValue.departure_day +"</td><td>"+currentValue.duration+"</td><td><button>Book</button</td></tr>");
+
+                    $('#search_flight button').click(function(event){
+                        event.stopPropagation();
+                        event.stopImmediatePropagation();
+                        localStorage.setItem("booking", "{"+currentValue.destination_name+","+currentValue.departure_day+"}"); 
+                        alert('booking has been made');
+                    });
                 });  
             });
         </script>
